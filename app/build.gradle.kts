@@ -13,7 +13,7 @@ android {
     namespace = "com.yuk.fuckMiuiThemeManager"
     defaultConfig {
         applicationId = namespace
-        minSdk = 31
+        minSdk = 30
         targetSdk = 33
         versionCode = 17
         versionName = "1.7"
@@ -50,5 +50,5 @@ android {
 dependencies {
     compileOnly("de.robv.android.xposed:api:82")
     implementation("com.github.kyuubiran:EzXHelper:1.0.3")
-    implementation("org.luckypray:DexKit:1.1.3")
+    implementation("org.luckypray:DexKit:1.1.4")
 }
