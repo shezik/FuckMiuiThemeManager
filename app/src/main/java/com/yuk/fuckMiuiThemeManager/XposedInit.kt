@@ -89,11 +89,7 @@ class XposedInit : IXposedHookLoadPackage {
                             type == loadClass("com.android.thememanager.basemodule.resource.model.Resource", lpparam.classLoader)
                         }
                         val productId = it.thisObject.getObject(resource.name).invokeMethod("getProductId").toString()
-                        val strPath = "/storage/emulated/0/Android/data/com.android.thememanager/files/MIUI/theme/.data/rights/theme/${productId}-largeicons.mra"
-                        val file = File(strPath)
-                        val fileParent = file.parentFile!!
-                        if (!fileParent.exists()) fileParent.mkdirs()
-                        file.createNewFile()
+                        File("/storage/emulated/0/Android/data/com.android.thememanager/files/MIUI/theme/.data/rights/theme/${productId}-largeicons.mra").createNewFile()
                     }
                 }
             }
